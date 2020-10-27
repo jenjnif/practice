@@ -5,6 +5,7 @@ dictionary = {}
 
 def add_unique_numbers():
     for number in input_array:
-        print(number)
+        dictionary[number] = dictionary.get(number, 0) + 1
+    return dictionary
 
-add_unique_numbers()
+print(add_unique_numbers())
