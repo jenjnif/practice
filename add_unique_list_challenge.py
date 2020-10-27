@@ -1,6 +1,8 @@
 # add up the two unique values in array
 
 input_array = [4,5,7,5,4,8]
+
+# solve with dictionary
 dictionary = {}
 
 def add_unique_numbers_dict(input_array):
@@ -15,6 +17,7 @@ def add_unique_numbers_dict(input_array):
 print(add_unique_numbers_dict(input_array))
 
 
+# solve with set
 have_seen = set()
 
 def add_unique_numbers_set(input_array):
@@ -26,3 +29,11 @@ def add_unique_numbers_set(input_array):
     return sum(have_seen)
 
 print(add_unique_numbers_set(input_array))
+
+
+# solve by checking against ordered list
+def add_unique_numbers_ordered_array(input_array):
+    input_array.sort()
+    return input_array
+
+print(add_unique_numbers_ordered_array(input_array))
