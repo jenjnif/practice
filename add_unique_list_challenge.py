@@ -34,6 +34,24 @@ print(add_unique_numbers_set(input_array))
 # solve by checking against ordered list
 def add_unique_numbers_ordered_array(input_array):
     input_array.sort()
-    return input_array
+    unique_array = []
+    index = 0
+
+    while index < len(input_array):
+        if index == len(input_array)-1:
+            unique_array.append(input_array[index])
+            break
+
+        if input_array[index] == input_array[index+1]:
+            index += 2
+
+        else:
+            unique_array.append(input_array[index])
+            index += 1
+
+
+    total = sum(unique_array)
+
+    return total
 
 print(add_unique_numbers_ordered_array(input_array))
